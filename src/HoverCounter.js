@@ -1,14 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import UpdatedComponent from './withCounter'
 
-const HoverCounter = () => {
-    const [count, setCount] = useState(0);
-    const hoverHandler = () => {
-        setCount(count + 1);
-    }
+const HoverCounter = ({name, incrementHandler, count}) => {
     return (
         <div>
-            <h2 onMouseOver={hoverHandler}>Hovered {count} Times</h2>
+            <h2 onMouseOver={incrementHandler}>Hovered {count} Times</h2>
         </div>
     )
 }

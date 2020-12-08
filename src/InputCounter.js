@@ -1,16 +1,13 @@
-import React, {useState} from 'react'
+import React from 'react';
+import UpdatedComponent from './withCounter'
 
-const InputCounter = () => {
-    const [count, setCount] = useState(0);
-    const inputHandler = () => {
-        setCount(count + 1);
-    }
+const InputCounter = ({name, incrementHandler, count}) => {
     return (
         <div>
-            <input onKeyDown={inputHandler}></input>
-            <h2>Input pressed {count} times</h2>
+            <input onKeyDown={incrementHandler}></input>
+            <h2>{name} pressed input {count} times</h2>
         </div>
     )
 }
 
-export default InputCounter
+export default UpdatedComponent(InputCounter)
