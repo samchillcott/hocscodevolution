@@ -1,6 +1,7 @@
 import './App.css';
 import ClickCounter from './ClickCounter';
 import HoverCounter from './HoverCounter';
+import InputCounter from './InputCounter';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <header className="App-header">
         <ClickCounter />
         <HoverCounter />
+        <InputCounter />
       </header>
     </div>
   );
