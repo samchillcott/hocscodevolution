@@ -1,5 +1,5 @@
 import React from 'react';
-import UpdatedComponent from './withCounter';
+import withCounter from './withCounter';
 
 const ClickCounter = ({incrementHandler, name, count}) => {
     return (
@@ -9,5 +9,5 @@ const ClickCounter = ({incrementHandler, name, count}) => {
     )
 }
 
-export default UpdatedComponent(ClickCounter)
+export default withCounter(ClickCounter)
 

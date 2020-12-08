@@ -1,14 +1,14 @@
 import React, {useState} from 'react'
 
-const UpdatedComponent = (OriginalComponent) => {
-    const NewComponent = () => {
+const withCounter = (WrappedComponent) => {
+    const WithCounter = () => {
         const [count, setCount] = useState(0);
         const incrementHandler = () => {
             setCount(count + 1)
         }
-        return <OriginalComponent name="Sam" incrementHandler={incrementHandler} count={count}/>
+        return <WrappedComponent name="Sam" incrementHandler={incrementHandler} count={count}/>
     }
-    return NewComponent
+    return WithCounter
 }
 
-export default UpdatedComponent
+export default withCounter
