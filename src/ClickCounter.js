@@ -1,17 +1,13 @@
-import React, {useState} from 'react'
+import React from 'react';
+import UpdatedComponent from './withCounter';
 
-const ClickCounter = () => {
-        const [count, setCount] = useState(0);
-
-     const incrementHandler = () => {
-            setCount(count + 1)
-        }
+const ClickCounter = ({incrementHandler, name, count}) => {
     return (
         <div>
-            <button onClick={incrementHandler}>Clicked {count} Times</button>
+            <button onClick={incrementHandler}>{name} Clicked {count} Times</button>
         </div>
     )
 }
 
-export default ClickCounter
+export default UpdatedComponent(ClickCounter)
 

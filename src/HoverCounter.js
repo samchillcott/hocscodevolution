@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import UpdatedComponent from './withCounter'
 
 const HoverCounter = () => {
     const [count, setCount] = useState(0);
@@ -12,4 +13,4 @@ const HoverCounter = () => {
     )
 }
 
-export default HoverCounter
+export default UpdatedComponent(HoverCounter)
