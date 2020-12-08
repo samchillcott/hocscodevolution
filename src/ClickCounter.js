@@ -5,6 +5,7 @@ class ClickCounter extends Component {
         return (
             <div>
                 <button>Clicked X Times</button>
+                test
             </div>
         )
     }
