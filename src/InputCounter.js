@@ -7,7 +7,8 @@ const InputCounter = () => {
     }
     return (
         <div>
-            <input onKeyDown={inputHandler}>Clicked {count} Times</input>
+            <input onKeyDown={inputHandler}></input>
+            <h2>Input pressed {count} times</h2>
         </div>
     )
 }
